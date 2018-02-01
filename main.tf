@@ -55,7 +55,7 @@ resource "aws_instance" "web" {
     Name        = "web ${count.index+1}/${var.num_webs}"
   }
 
-  count = 2
+  count = "${var.num_webs}"
 }
 
 output "public_dns" {
